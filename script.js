@@ -46,10 +46,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
       // we're ready to receive some data!
       var canvas = document.querySelectorAll('canvas'),
-          cwidth = canvas[num].width,
+          cwidth = canvas[num].width*2,
           cheight = canvas[num].height - 2,
-          meterWidth = 5, //width of the meters in the spectrum
-          gap = 1, //gap between meters
+          meterWidth = 3, //width of the meters in the spectrum
+          gap = 2, //gap between meters
           capHeight = 2,
           capStyle = '#fff',
           meterNum = 500 / (2), //count of the meters
