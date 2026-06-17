@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       var canvas = document.querySelectorAll('canvas'),
           cwidth = canvas[num].width,
           cheight = canvas[num].height - 2,
-          meterWidth = 2, //width of the meters in the spectrum
+          meterWidth = 5, //width of the meters in the spectrum
           gap = 1, //gap between meters
           capHeight = 2,
           capStyle = '#fff',
