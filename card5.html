@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Music Player</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+
+  <script src="https://kit.fontawesome.com/220b166d65.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body class="card5">
+  <div class="canvas">
+
+    <div class="swiper mySwiper">
+
+        <div class="swiper-wrapper" id="wrapper">
+
+            <div class="swiper-slide" id="swipper">
+                <div class="card pinkC" id="card1">
+                  <div class="top pinkT"><i class="fa-brands fa-nfc-directional"></i> </div>
+                    <div class="img"><img src="https://images.unsplash.com/photo-1548054670-3e8e3687e3d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1853&q=80" /></div>
+                    <div id="songName">Senbonzakura</div>
+                    <div id="artist">ShorellaXO</div>
+                    <audio src="assets/audio/audio13.mp3" id="audio"></audio>
+                    <div class="controls pinkB">
+                      <div id="canvasControl"><canvas id='canvas' width="150" height="40"></canvas></div>
+                      <div class="prev">
+                        <div class="swiper-button-prev" id="prevS"></div>
+                        <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+                      </div>
+                      <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+                      <div class="next">
+                        <div class="swiper-button-next" id="nextS"></div>
+                        <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+                      </div>
+                      <input type="range" value="0" id="progress_bar">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide" id="swipper">
+              <div class="card pinkC" id="card2">
+                <div class="top pinkT"><i class="fa-brands fa-nfc-directional"></i></div>
+                  <div class="img"><img src="https://th.bing.com/th/id/OIP.1xwSBEf_GjkClZEEh6wsYgHaHa?pid=ImgDet&rs=1" /></div>
+                  <div id="songName">Nanawoakari</div>
+                  <div id="artist">ナナヲアカリ</div>
+                  <audio src="assets/audio/audio14.mp3" id="audio"></audio>
+                  <div class="controls pinkB">
+                    <div id="canvasControl"><canvas id='canvas' width="150" height="40"></canvas></div>
+
+                    <div class="prev">
+                      <div class="swiper-button-prev" id="prevS"></div>
+                      <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+                    </div>
+                    <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+                    <div class="next">
+                      <div class="swiper-button-next" id="nextS"></div>
+                      <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+                    </div>
+                    <input type="range" value="0" id="progress_bar">
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide" id="swipper">
+            <div class="card pinkC" id="card3">
+              <div class="top pinkT"><i class="fa-brands fa-nfc-directional"></i></div>
+                <div class="img"><img src="https://i1.sndcdn.com/artworks-KUt87jtGdlyk-0-t500x500.jpg" /></div>
+                <div id="songName">Shinunoga E-wa</div>
+                <div id="artist">Fuji Kage</div>
+                <audio src="assets/audio/audio15.mp3" id="audio"></audio>
+                <div class="controls pinkB">
+                  <div id="canvasControl"><canvas id='canvas' width="150" height="40"></canvas></div>
+
+                  <div class="prev">
+                    <div class="swiper-button-prev" id="prevS"></div>
+                    <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+                  </div>
+                  <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+                  <div class="next">
+                    <div class="swiper-button-next" id="nextS"></div>
+                    <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+                  </div>
+                  <input type="range" value="0" id="progress_bar">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+  </div>
+  <footer>
+    <a href="index.html"><div class="pagination"><i class="fa-solid fa-house"></i></div></a>
+    <a href="card1.html"><div class="pagination">1</div></a>
+    <a href="card2.html"><div class="pagination">2</div></a>
+    <a href="card3.html"><div class="pagination">3</div></a>
+    <a href="card4.html"><div class="pagination">4</div></a>
+    <a href="card5.html"><div class="pagination glow">5</div></a>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Music Player</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+
+  <script src="https://kit.fontawesome.com/220b166d65.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body class="card3">
+  <div class="canvas">
+
+    <div class="swiper mySwiper">
+
+        <div class="swiper-wrapper" id="wrapper">
+
+            <div class="swiper-slide" id="swipper">
+                <div class="card blackC" id="card1">
+                  <div class="top blackT"><i class="fa-brands fa-nfc-directional"></i> </div>
+                    <div class="img"><img src="https://i1.sndcdn.com/artworks-gq1kp0qJWxs2hhHz-5Wnesg-t500x500.jpg" /></div>
+                    <div id="songName">Bella Ciao</div>
+                    <div id="artist">Money Heist</div>
+                    <audio src="assets/audio/audio7.mp3" id="audio"></audio>
+                    <div class="controls blackB">
+                      <div id="canvasControl"><canvas id='canvas' width="150" height="40"></canvas></div>
+                      <div class="prev">
+                        <div class="swiper-button-prev" id="prevS"></div>
+                        <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+                      </div>
+                      <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+                      <div class="next">
+                        <div class="swiper-button-next" id="nextS"></div>
+                        <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+                      </div>
+                      <input type="range" value="0" id="progress_bar">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide" id="swipper">
+              <div class="card blackC" id="card2">
+                <div class="top blackT"><i class="fa-brands fa-nfc-directional"></i></div>
+                  <div class="img"><img src="https://i.pinimg.com/736x/1f/25/93/1f2593e55665d1840a9f79e4c044aa5d.jpg" /></div>
+                  <div id="songName">Achilles Come Down</div>
+                  <div id="artist">Gang Of Youth</div>
+                  <audio src="assets/audio/audio8.mp3" id="audio"></audio>
+                  <div class="controls blackB">
+                    <div id="canvasControl"><canvas id='canvas' width="150" height="40"></canvas></div>
+
+                    <div class="prev">
+                      <div class="swiper-button-prev" id="prevS"></div>
+                      <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+                    </div>
+                    <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+                    <div class="next">
+                      <div class="swiper-button-next" id="nextS"></div>
+                      <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+                    </div>
+                    <input type="range" value="0" id="progress_bar">
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide" id="swipper">
+            <div class="card blackC" id="card3">
+              <div class="top blackT"><i class="fa-brands fa-nfc-directional"></i></div>
+                <div class="img"><img src="https://th.bing.com/th/id/OIP.LKtEKhbvCm5pWB2X2pazXQHaIA?pid=ImgDet&rs=1" /></div>
+                <div id="songName">Icarus</div>
+                <div id="artist">Bastille</div>
+                <audio src="assets/audio/audio9.mp3" id="audio"></audio>
+                <div class="controls blackB">
+                  <div id="canvasControl"><canvas id='canvas' width="150" height="40"></canvas></div>
+
+                  <div class="prev">
+                    <div class="swiper-button-prev" id="prevS"></div>
+                    <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+                  </div>
+                  <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+                  <div class="next">
+                    <div class="swiper-button-next" id="nextS"></div>
+                    <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+                  </div>
+                  <input type="range" value="0" id="progress_bar">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+  </div>
+  <footer>
+    <a href="index.html"><div class="pagination"><i class="fa-solid fa-house"></i></div></a>
+    <a href="card1.html"><div class="pagination">1</div></a>
+    <a href="card2.html"><div class="pagination">2</div></a>
+    <a href="card3.html"><div class="pagination glow">3</div></a>
+    <a href="card4.html"><div class="pagination">4</div></a>
+    <a href="card5.html"><div class="pagination">5</div></a>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+</html>

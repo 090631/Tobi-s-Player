@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Music Player</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="styles.css" />
+
+		<script src="https://kit.fontawesome.com/220b166d65.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+
+	<body class="card4">
+		<div class="canvas">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper" id="wrapper">
+					<div class="swiper-slide" id="swipper">
+						<div class="card blueC" id="card1">
+							<div class="top blueT"><i class="fa-brands fa-nfc-directional"></i></div>
+							<div class="img"><img src="https://th.bing.com/th/id/OIP.GNqvZ8QoXwgEMkMJrxzXhwHaHa?pid=ImgDet&rs=1" /></div>
+							<div id="songName">Cure For Me</div>
+							<div id="artist">AURORA</div>
+							<audio src="assets/audio/audio10.mp3" id="audio"></audio>
+							<div class="controls blueB">
+								<div id="canvasControl"><canvas id="canvas" width="150" height="40"></canvas></div>
+								<div class="prev">
+									<div class="swiper-button-prev" id="prevS"></div>
+									<div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+								</div>
+								<div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+								<div class="next">
+									<div class="swiper-button-next" id="nextS"></div>
+									<div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+								</div>
+								<input type="range" value="0" id="progress_bar" />
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide" id="swipper">
+						<div class="card blueC" id="card2">
+							<div class="top blueT"><i class="fa-brands fa-nfc-directional"></i></div>
+							<div class="img"><img src="https://th.bing.com/th/id/OIP.QDhLREj0CMegpIzJjZZ_UQHaHa?pid=ImgDet&rs=1" /></div>
+							<div id="songName">All Eyes On Me</div>
+							<div id="artist">Bo Burnham</div>
+							<audio src="assets/audio/audio11.mp3" id="audio"></audio>
+							<div class="controls blueB">
+								<div id="canvasControl"><canvas id="canvas" width="150" height="40"></canvas></div>
+
+								<div class="prev">
+									<div class="swiper-button-prev" id="prevS"></div>
+									<div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+								</div>
+								<div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+								<div class="next">
+									<div class="swiper-button-next" id="nextS"></div>
+									<div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+								</div>
+								<input type="range" value="0" id="progress_bar" />
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide" id="swipper">
+						<div class="card blueC" id="card3">
+							<div class="top blueT">
+								<i class="fa-brands fa-nfc-directional"></i>
+							</div>
+							<div class="img">
+								<img src="https://th.bing.com/th/id/OIP.6J9lQ6eF1MQI80_vqXCsegAAAA?pid=ImgDet&rs=1" />
+							</div>
+							<div id="songName">Running From The Wolves</div>
+							<div id="artist">AURORA</div>
+							<audio src="assets/audio/audio12.mp3" id="audio"></audio>
+							<div class="controls blueB">
+								<div id="canvasControl"><canvas id="canvas" width="150" height="40"></canvas></div>
+
+								<div class="prev">
+									<div class="swiper-button-prev" id="prevS"></div>
+									<div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+								</div>
+								<div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+								<div class="next">
+									<div class="swiper-button-next" id="nextS"></div>
+									<div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+								</div>
+								<input type="range" value="0" id="progress_bar" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<footer>
+			<a href="index.html">
+				<div class="pagination"><i class="fa-solid fa-house"></i></div>
+			</a>
+			<a href="card1.html"><div class="pagination">1</div></a>
+			<a href="card2.html"><div class="pagination">2</div></a>
+			<a href="card3.html"><div class="pagination">3</div></a>
+			<a href="card4.html"><div class="pagination glow">4</div></a>
+			<a href="card5.html"><div class="pagination">5</div></a>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	</body>
+</html>

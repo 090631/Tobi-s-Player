@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Music Player</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+
+  <script src="https://kit.fontawesome.com/220b166d65.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body class="card2">
+  <div class="canvas">
+
+    <div class="swiper mySwiper">
+
+        <div class="swiper-wrapper" id="wrapper">
+
+            <div class="swiper-slide" id="swipper">
+                <div class="card yelwC" id="card1">
+                  <div class="top yelwT"><i class="fa-brands fa-nfc-directional"></i> </div>
+                    <div class="img"><img src="https://th.bing.com/th/id/R.1a69070b3390d6b11671268e57fb73da?rik=SwgsNGtWxHuHqA&pid=ImgRaw&r=0" /></div>
+                    <div id="songName">Dancing & The Dreaming</div>
+                    <div id="artist">Gerard Butler</div>
+                    <audio src="assets/audio/audio6.mp3" id="audio"></audio>
+                    <div class="controls yelwB">
+                      <div id="canvasControl"><canvas id='canvas' width="150" height="40"></canvas></div>
+                      <div class="prev">
+                        <div class="swiper-button-prev" id="prevS"></div>
+                        <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+                      </div>
+                      <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+                      <div class="next">
+                        <div class="swiper-button-next" id="nextS"></div>
+                        <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+                      </div>
+                      <input type="range" value="0" id="progress_bar">
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide" id="swipper">
+              <div class="card yelwC" id="card2">
+                <div class="top yelwT"><i class="fa-brands fa-nfc-directional"></i></div>
+                  <div class="img"><img src="https://th.bing.com/th/id/R.cc8e24d5bc142a9bcf52636afd844ce1?rik=HjXX%2fa1H5LknfA&pid=ImgRaw&r=0" /></div>
+                  <div id="songName">Valhalla</div>
+                  <div id="artist">Assassin's Creed</div>
+                  <audio src="assets/audio/audio4.mp3" id="audio"></audio>
+                  <div class="controls yelwB">
+                    <div id="canvasControl"><canvas id='canvas' width="150" height="40"></canvas></div>
+
+                    <div class="prev">
+                      <div class="swiper-button-prev" id="prevS"></div>
+                      <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+                    </div>
+                    <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+                    <div class="next">
+                      <div class="swiper-button-next" id="nextS"></div>
+                      <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+                    </div>
+                    <input type="range" value="0" id="progress_bar">
+                  </div>
+              </div>
+          </div>
+          <div class="swiper-slide" id="swipper">
+            <div class="card yelwC" id="card3">
+              <div class="top yelwT"><i class="fa-brands fa-nfc-directional"></i></div>
+                <div class="img"><img src="https://th.bing.com/th/id/OIP.4-Fa6W5zjHDbFaT4aWHLIwAAAA?pid=ImgDet&rs=1" /></div>
+                <div id="songName">Savage Daughter</div>
+                <div id="artist">Sarah Hester Ross</div>
+                <audio src="assets/audio/audio5.mp3" id="audio"></audio>
+                <div class="controls yelwB">
+                  <div id="canvasControl"><canvas id='canvas' width="150" height="40"></canvas></div>
+
+                  <div class="prev">
+                    <div class="swiper-button-prev" id="prevS"></div>
+                    <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
+                  </div>
+                  <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
+                  <div class="next">
+                    <div class="swiper-button-next" id="nextS"></div>
+                    <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
+                  </div>
+                  <input type="range" value="0" id="progress_bar">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+  </div>
+  <footer>
+    <a href="index.html"><div class="pagination"><i class="fa-solid fa-house"></i></div></a>
+    <a href="card1.html"><div class="pagination">1</div></a>
+    <a href="card2.html"><div class="pagination glow">2</div></a>
+    <a href="card3.html"><div class="pagination">3</div></a>
+    <a href="card4.html"><div class="pagination">4</div></a>
+    <a href="card5.html"><div class="pagination">5</div></a>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+</html>
