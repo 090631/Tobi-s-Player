@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
           gap = 1, //gap between meters
           capHeight = 2,
           capStyle = '#fff',
-          meterNum = 150 / (2), //count of the meters
+          meterNum = 500 / (2), //count of the meters
           capYPositionArray = []; ////store the vertical position of hte caps for the preivous frame
       ctx = canvas[num].getContext('2d'),
       gradient = ctx.createLinearGradient(0, 0, 0, 300);
