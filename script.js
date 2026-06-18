@@ -107,8 +107,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   ];
 
-  const bgindex = [3, 4, 4, 5, 3];
-
   const progress_bar = document.querySelectorAll(`#progress_bar`);
   const song = document.querySelectorAll(`#audio`);
   const button_icon = document.querySelectorAll(`#button_icon`);
@@ -116,8 +114,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
   const next = document.querySelectorAll(`#nextS`);
   const prev = document.querySelectorAll(`#prevS`);
   const bg = document.querySelector(`body`);
-  let cardindex = pathname.match(/\d+/g) - 1;
-
   //change i to card number
   for (let i = 0; i < 3; i++){
     prev[i].addEventListener("click", function(event){
@@ -189,12 +185,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   function change_bg(num){
     let pathname = window.location.pathname;
-    let cardindex = pathname.match(/\d+/g) - 1;
-    let index = 0;
-    for(let i = 0; i<index; i++){
-      index+= bgindex[i];
-    }
-    bg.style.background = bgArray[num + index];
+    let index = pathname.match(/\d+/g) - 1;
+    bg.style.background = bgArray[num + (3 * index)];
     bg.style.backgroundSize = 'cover';
   };
 
