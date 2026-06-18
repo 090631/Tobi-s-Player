@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       ctx = canvas[num].getContext('2d'),
       gradient = ctx.createLinearGradient(0, 0, 0, 300);
 
+    
       // loop
       function renderFrame() {
           var array = new Uint8Array(analyser.frequencyBinCount);
