@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   ];
 
-  const progress_bar = document.querySelectorAll(`#progress_bar`);
+  const progress_bar = document.querySelectorAll(`#progress_bar_control`);
   const song = document.querySelectorAll(`#audio`);
   const button_icon = document.querySelectorAll(`#button_icon`);
   const button = document.querySelectorAll(`#button`);
