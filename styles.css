@@ -71,7 +71,7 @@ body{
     margin: 1rem;
     padding: 1rem 1rem;
     border-radius: 0.5rem;
-    width: 85%;
+    width: 1050px;
     aspect-ratio: 2/1;
 
     background-color: #20231988;
@@ -79,9 +79,9 @@ body{
 
 
 .swiper {
-  width: 75%;
-  /*padding-top: 50px;
-  padding-bottom: 100px;*/
+  width: 95%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #wrapper .swiper-slide-shadow-coverflow{
@@ -93,25 +93,26 @@ body{
   background-position: center;
   background-size: cover;
 
-  width: 250px;
-  height: 500px;
+  width: 600px;
+  height: 225px;
 }
 
 .card {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;  
   position: relative;
-
   width: 100%;
-  height: 100%;
+  height: 90%;
   border-radius: 3rem;
   overflow: hidden;
   border: 2px;
   background-size: cover;
+  padding: 1rem;
 }
 
 .redC {
-  background-image: linear-gradient(#d53030, #b46464);
+  background-image: linear-gradient(#d530304c, #b464644c);
+  box-shadow: 0 10px 15px #39506f;
 }
 
 .yelwC {
@@ -173,14 +174,14 @@ body{
   align-items: center;
   border-radius: 3rem 3rem 0rem 0rem;
   width: 100%;
-  aspect-ratio: 9/2;
+  aspect-ratio: 15/2;
   font-size: 2rem;
   color: white;
   align-self: flex-start;
 }
 
 .redT {
-  background-image: linear-gradient(#fc7b7b, #d73737);
+  background-image: linear-gradient(#fc7b7b4c, #d737374c);
 }
 
 .yelwT {
@@ -204,24 +205,28 @@ body{
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 80%;
+  flex-shrink: 0;
+  width: 200px;
   aspect-ratio: 1/1;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 2rem;
+  border: #1b313b;
 }
 
 .img img {
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
-  position: absolute;
+  border-radius: 2rem;
   background-size: cover;
+  border:#121212
 }
 
 #songName {
   font-size: 1rem;
   font-weight: bold;
   color: white;
+  display: flex;
+  align-self: flex-start;
 }
 
 #artist {
@@ -230,25 +235,22 @@ body{
 }
 
 .controls {
-  display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  align-content: center;
   align-self: flex-end;
   gap: 1rem;
   padding-bottom: 1rem;
-  position: relative;
-  translate: 0 0;
   border-radius: 1.5rem 1.5rem 3rem 3rem;
-
   width: 100%;
-  aspect-ratio: 3/2;
+  flex: 1;                  /* take remaining width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 5/2;
+  padding-left: 1rem;
 }
 
-.redB {
-  background-image: linear-gradient(to top left, #d73737, #fc7b7b);
-}
+
 
 .yelwB {
   background-image: linear-gradient(to top left, #c99b53, #fad778);
@@ -271,6 +273,14 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.controls #buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
 }
 
 .button{
@@ -321,23 +331,33 @@ h4 {
 }
 
 input[type="range"] {
-  -webkit-appearance: none;
-
+  -webkit-appearance: progress-bar;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 4px;
-
+  position: fixed;
   background: white;
   cursor: pointer;
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: white;
   box-shadow: 0 10px 20px rgba(255, 26, 26, .22);
+}
+
+#progress_bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
