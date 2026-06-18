@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   let cardindex = pathname.match(/\d+/g) - 1;
 
   //change i to card number
-  for (let i = 0; i < cardindex+1; i++){
+  for (let i = 0; i < bdindex[cardindex+1]; i++){
     prev[i].addEventListener("click", function(event){
       pause(i);
       play(i-1);
