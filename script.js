@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       // audio.play();
   };
 
-  for (let i = 0; i < 3; i++){
+  for (let i = 0; i < 5; i++){
       audio[i].onplay = function(){
           start(i);
       }
