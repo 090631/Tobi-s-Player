@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     let pathname = window.location.pathname;
     let cardindex = pathname.match(/\d+/g) - 1;
     let index = 0;
-    for(let i = 0; i<index; i++){
+    for(let i = 0; i<cardindex+1; i++){
       index+= bgindex[i];
     }
     bg.style.background = bgArray[num + index];
