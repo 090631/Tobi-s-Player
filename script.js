@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   ];
 
-  const bgindex = [3, 4, 4, 5, 3]
+  const bgindex = [3, 4, 4, 5, 3];
 
   const progress_bar = document.querySelectorAll(`#progress_bar`);
   const song = document.querySelectorAll(`#audio`);
