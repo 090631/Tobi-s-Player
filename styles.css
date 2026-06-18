@@ -105,14 +105,20 @@ body{
   height: 90%;
   border-radius: 3rem;
   overflow: hidden;
-  border: 2px;
+  border: 8px solid #20353ff1;
   background-size: cover;
-  padding: 1rem;
+  /*padding: 1rem;*/
 }
 
 .redC {
-  background-image: linear-gradient(#d530304c, #b464644c);
   box-shadow: 0 10px 15px #39506f;
+}
+
+.Cardbg {
+  background-image: url("https://wallpapercave.com/wp/wp2175488.png");
+  background-size: contain;
+  position: absolute;
+  opacity: 0.75;
 }
 
 .yelwC {
@@ -164,8 +170,9 @@ body{
 }
 
 .card:hover::before, .card:hover::after, .canvas:hover::before, .canvas:hover::after{
-  top:20%;
+  top:25%;
   opacity: 1;
+  z-index: 1000;
 }
 
 .top{
@@ -210,7 +217,6 @@ body{
   aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: 2rem;
-  border: #1b313b;
 }
 
 .img img {
@@ -221,8 +227,17 @@ body{
   border:#121212
 }
 
-#songName {
-  font-size: 1rem;
+#songDescreption {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  align-items: flex-start;
+  margin-top: 12px;
+  z-index: 1000;
+}
+
+#song{
+  font-size: 24px;
   font-weight: bold;
   color: white;
   display: flex;
@@ -230,8 +245,10 @@ body{
 }
 
 #artist {
-  font-size: 0.75rem;
+  font-size: 16px;
   color: grey;
+  display: flex;
+  align-self: flex-start;
 }
 
 .controls {
@@ -246,7 +263,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  aspect-ratio: 5/2;
+  aspect-ratio: 4/2;
   padding-left: 1rem;
 }
 
