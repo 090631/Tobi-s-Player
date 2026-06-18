@@ -130,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     button[i].addEventListener("click", function(event){
       play_pause(i);
+      change_bg(i);
     });
     song[i].addEventListener("loadedmetadata", function(event){
       progress_bar[i].max = song[i].duration;
