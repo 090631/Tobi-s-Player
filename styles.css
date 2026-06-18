@@ -1,112 +1,447 @@
-<!DOCTYPE html>
-<html lang="en">
+/* foo {
+  position: x;
+  size: y;
+  content/color: z;
+}*/
 
-<head>
-  <title>Music Player</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  color: #000;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  animation: fadeIn 1s;
+  /*-webkit-transition: background-image .1s;*/
+
+}
+
+.card1 {
+  background-image: url("https://images.unsplash.com/photo-1507471509451-1d04d60f896d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80");
+  background-size: cover;
+  /*-webkit-transition: background-image .1s;*/
+}
+
+.card2 {
+  background-image: url("https://images.unsplash.com/photo-1609894851180-7be27983da7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
+  background-size: cover;
+  /*-webkit-transition: background-image .1s;*/
+}
+
+.card3 {
+  background: url("https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
+  background-size: cover;
+  /*-webkit-transition: background-image .1s;*/
+}
+
+.card4 {
+  background: url("https://images.unsplash.com/photo-1570284613060-766c33850e00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
+  background-size: cover;
+  /*-webkit-transition: background-image .1s;*/
+}
+
+.card5 {
+  background: url("https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1828&q=80");
+  background-size: cover;
+  /*-webkit-transition: background-image .1s;*/
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    margin: 1rem;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    width: 1050px;
+    aspect-ratio: 2/1;
+
+    background-color: #20231988;
+}
 
 
-  <script src="https://kit.fontawesome.com/220b166d65.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
-</head>
+.swiper {
+  width: 95%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
-<body class="card1">
-  <div class="canvas">
+#wrapper .swiper-slide-shadow-coverflow{
+  background-color: #3b3b3baa;
+  border-radius: 3rem;
+}
 
-    <div class="swiper mySwiper">
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
 
-        <div class="swiper-wrapper" id="wrapper">
+  width: 600px;
+  height: 225px;
+}
 
-            <div class="swiper-slide" id="swipper">
-                <div class="card redC" id="card1">
-                    <div class="img"><img src="https://th.bing.com/th/id/OIP.TYXKkWA_bUA6D2xJe6i3KAAAAA?pid=ImgDet&rs=1" /></div>
-                    <audio src="assets/audio/audio1.mp3" id="audio"></audio>
-                    <div class="controls">
-                      <div id="songName">Red Flags</div>
+.card {
+  display: flex;
+  align-items: center;  
+  position: relative;
+  width: 100%;
+  height: 90%;
+  border-radius: 3rem;
+  overflow: hidden;
+  border: 2px;
+  background-size: cover;
+  padding: 1rem;
+}
 
-                      <div id="canvasControl"><canvas id='canvas' width="250" height="40"></canvas></div>
-                      
-                      <div id="buttons">
-                      <div class="prev">
-                        <div class="swiper-button-prev" id="prevS"></div>
-                        <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
-                      </div>
-                      <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
-                      <div class="next">
-                        <div class="swiper-button-next" id="nextS"></div>
-                        <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
-                      </div>
-                      </div> 
-                      <div id="progress_bar_div"><input type="range" value="0" id="progress_bar"></div>
-                    </div>
-                </div>
-            </div>
+.redC {
+  background-image: linear-gradient(#d530304c, #b464644c);
+  box-shadow: 0 10px 15px #39506f;
+}
 
-            <div class="swiper-slide" id="swipper">
-              <div class="card redC" id="card2">
-                  <div class="img"><img src="https://th.bing.com/th/id/OIP.zyoAIW1DVkYBCI6HVOQ-AgHaHa?pid=ImgDet&rs=1" /></div>
-                  <audio src="assets/audio/audio2.mp3" id="audio"></audio>
-                  <div class="controls">
-                    <div id="songName">Mixed Messages</div>
-                    <div id="canvasControl"><canvas id='canvas' width="250" height="40"></canvas></div>
+.yelwC {
+  background-image: linear-gradient(#d19236, #bfa87d);
+}
 
-                    <div id="buttons">
-                      <div class="prev">
-                        <div class="swiper-button-prev" id="prevS"></div>
-                        <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
-                      </div>
-                      <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
-                      <div class="next">
-                        <div class="swiper-button-next" id="nextS"></div>
-                        <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
-                      </div>
-                    </div> 
-                    <div id="progress_bar_div"><input type="range" value="0" id="progress_bar"></div>
-                  </div>
-              </div>
-          </div>
+.blackC {
+  background-image: linear-gradient(#000000, #333333);
+}
 
-          <div class="swiper-slide" id="swipper">
-              <div class="card redC" id="card3">
-                  <div class="img"><img src="https://i1.sndcdn.com/artworks-KQDla9ltSRTkOgBG-iXKOkg-t500x500.jpg" /></div>
-                  <audio src="assets/audio/audio3.mp3" id="audio"></audio>
-                  <div class="controls">
-                    <div id="songName">Welcome To The Internet</div>
-                    <div id="canvasControl"><canvas id='canvas' width="250" height="40"></canvas></div>
+.blueC {
+  background-image: linear-gradient(#111f26, #559bbe);
+}
 
-                    <div id="buttons">
-                      <div class="prev">
-                        <div class="swiper-button-prev" id="prevS"></div>
-                        <div class="button" id="back"><i class="fa-solid fa-backward"></i></div>
-                      </div>
-                      <div class="button" id="button"><i class="fa-solid fa-play" id="button_icon"></i></div>
-                      <div class="next">
-                        <div class="swiper-button-next" id="nextS"></div>
-                        <div class="button" id="forward"><i class="fa-solid fa-forward"></i></div>
-                      </div>
-                    </div> 
-                    <div id="progress_bar_div"><input type="range" value="0" id="progress_bar"></div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
+.pinkC {
+  background-image: linear-gradient(#6131dd, #432da2);
+}
 
-    </div>
+.card::before, .canvas::before{
+  background: linear-gradient(
+    transparent,
+    white,
+    transparent
+  );
+  position: absolute;
+  height: 50%;
+  width: 2px;
+  left: 0px;
+  top: 50%;
+  opacity: 0;
+  content: "";
+  transition: all .25s ease;
+}
 
-  </div>
-  <footer>
-    <a href="index.html"><div class="pagination"><i class="fa-solid fa-house"></i></div></a>
-    <a href="card1.html"><div class="pagination glow">1</div></a>
-    <a href="card2.html"><div class="pagination">2</div></a>
-    <a href="card3.html"><div class="pagination">3</div></a>
-    <a href="card4.html"><div class="pagination">4</div></a>
-    <a href="card5.html"><div class="pagination">5</div></a>
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-</body>
-</html>
+.card::after, .canvas::after{
+  background: linear-gradient(
+    transparent,
+    white,
+    transparent
+  );
+  position: absolute;
+  height: 50%;
+  width: 2px;
+  right: 0px;
+  top: 50%;
+  opacity: 0;
+  content: "";
+  transition: all .25s ease;
+}
+
+.card:hover::before, .card:hover::after, .canvas:hover::before, .canvas:hover::after{
+  top:20%;
+  opacity: 1;
+}
+
+.top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem 3rem 0rem 0rem;
+  width: 100%;
+  aspect-ratio: 15/2;
+  font-size: 2rem;
+  color: white;
+  align-self: flex-start;
+}
+
+.redT {
+  background-image: linear-gradient(#fc7b7b4c, #d737374c);
+}
+
+.yelwT {
+  background-image: linear-gradient(#fad778, #c99b53);
+}
+
+.blackT {
+  background-image: linear-gradient(#333333, #121212);
+}
+
+.blueT {
+  background-image: linear-gradient(#3d8882, #294c5d);
+}
+
+.pinkT {
+  background-image: linear-gradient(to bottom, #a95ef7, #6938da);
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  width: 200px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 2rem;
+  border: #1b313b;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  background-size: cover;
+  border:#121212
+}
+
+#songName {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-self: flex-start;
+}
+
+#artist {
+  font-size: 0.75rem;
+  color: grey;
+}
+
+.controls {
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: flex-end;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 1.5rem 1.5rem 3rem 3rem;
+  width: 100%;
+  flex: 1;                  /* take remaining width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 5/2;
+  padding-left: 1rem;
+}
+
+
+
+.yelwB {
+  background-image: linear-gradient(to top left, #c99b53, #fad778);
+}
+
+.blackB {
+  background-image: linear-gradient(to top left, #121212, #333333);
+}
+
+.blueB {
+  background-image: linear-gradient(to top left, #1b313b, #3d8882);
+}
+
+.pinkB {
+  background-image: linear-gradient(to top left, #5e31d7, #d97efd);
+}
+
+.controls #canvasControl {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls #buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  color: black;
+  background-color: white;
+
+  cursor: pointer;
+}
+
+#button{
+  height: 45px;
+  width: 45px;
+}
+
+h4 {
+  flex: 1 0 100%;
+  text-align: center;
+}
+
+.button:hover, #nextS:hover ~ #forward, #prevS:hover ~ #back{
+  color: #7c56c7;
+  transition: all 0.25s ease-In-Out;
+}
+
+.button:active{
+  box-shadow: 0 0 0;
+  transition: all .25s ease;
+}
+
+.next, .prev{
+  position: relative;
+}
+
+#prevS, #nextS{
+  position: absolute;
+  color: #ffffff00;
+  background-color: #ffffff00;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 4px;
+  position: fixed;
+  background: white;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 10px 20px rgba(255, 26, 26, .22);
+}
+
+#progress_bar_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: end;
+  width: 100%;
+  aspect-ratio: 20/1;
+  background-color: black;
+  position: relative;
+}
+
+footer .pagination {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  margin: .75rem;
+  width: 2rem;
+  aspect-ratio: 1/1;
+  color: black;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+}
+
+.glow {
+  box-shadow: 0 0 1rem #ffffff;
+}
+
+footer::before{
+  background: linear-gradient(
+    90deg,
+    transparent,
+    white,
+    transparent
+  );
+  position: absolute;
+  height: 3px;
+  width: 60%;
+  top: 0;
+  right: 100%;
+  opacity: 0;
+  content: "";
+  transition: all .25s ease;
+}
+
+footer:hover::before{
+  right: 20%;
+  opacity: 1;
+}
+
+.pagination::before{
+  background: linear-gradient(
+    90deg,
+    transparent,
+    white,
+    transparent
+  );
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 125%;
+  right: 50%;
+  opacity: 0;
+  content: "";
+  transition: all .25s ease;
+}
+
+/*.pagination:hover::before{
+  right: 0;
+  opacity: 1;
+}*/
+
+.pagination:hover{
+  box-shadow: 0 0 1rem #ffffff;
+  transition: all .25s ease-Out;
+}
+.pagination:active{
+  background-color: grey;
+  box-shadow: 0 0 0 black;
+  transition: all .25s ease;
+}
+
+a {
+  text-decoration: none;
+}

@@ -48,16 +48,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
       var canvas = document.querySelectorAll('canvas'),
           cwidth = canvas[num].width,
           cheight = canvas[num].height - 2,
-          meterWidth = 3, //width of the meters in the spectrum
+          meterWidth = 2, //width of the meters in the spectrum
           gap = 1, //gap between meters
           capHeight = 2,
           capStyle = '#fff',
-          meterNum = 200 / (2), //count of the meters
+          meterNum = 150 / (2), //count of the meters
           capYPositionArray = []; ////store the vertical position of hte caps for the preivous frame
       ctx = canvas[num].getContext('2d'),
       gradient = ctx.createLinearGradient(0, 0, 0, 300);
 
-    
       // loop
       function renderFrame() {
           var array = new Uint8Array(analyser.frequencyBinCount);
