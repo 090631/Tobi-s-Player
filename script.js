@@ -150,7 +150,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
       setInterval(()=>{progress_bar[i].value = song[i].currentTime;},
       500);
     };
-    song[i].addEventListener('ended', () => {
+    if(progress_bar[i].value > progress_bar[i].max*0.95) {
+      pause(i);
+      play(i+1);
+      change_bg(i+1);
+    }
+  };
+      song[i].addEventListener('ended', () => {
         if(i < song.length - 1){
             play(i + 1);
             change_bg(i + 1);
