@@ -23,13 +23,13 @@ body{
 }
 
 .card1 {
-  background-image: url("https://images.unsplash.com/photo-1507471509451-1d04d60f896d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80");
+  background-image: url("assets/img/ridnymbg.png");
   background-size: cover;
   /*-webkit-transition: background-image .1s;*/
 }
 
 .card2 {
-  background-image: url("https://images.unsplash.com/photo-1609894851180-7be27983da7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
+  background-image: url("assets/img/liek.jpg");
   background-size: cover;
   /*-webkit-transition: background-image .1s;*/
 }
@@ -67,14 +67,52 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-
+    width: 1050px;
+    aspect-ratio: 9/4;
     margin: 1rem;
     padding: 1rem 1rem;
     border-radius: 0.5rem;
-    width: 1050px;
-    aspect-ratio: 9/4;
 
-    background-image: linear-gradient(to top left, #d7efe65c, #1f29375c, #1d294e5c);
+    background: linear-gradient(
+    135deg,
+    rgba(255, 182, 193, 0.12),
+    rgba(255, 105, 180, 0.06)
+    );
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(12px);
+  
+    border-top: 1px solid rgba(255,255,255,0.4);
+    border-left: 1px solid rgba(255,255,255,0.25);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  
+    border-radius: 24px;
+  
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.15),
+      inset 0 1px 1px rgba(255,255,255,0.15);
+}
+
+
+.canvas:hover {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+.canvas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.08) 20%,
+    rgba(255, 255, 255, 0) 60%
+  );
+
+  pointer-events: none;
 }
 
 
@@ -95,6 +133,7 @@ body{
 
   width: 600px;
   height: 225px;
+  padding-bottom: 1rem;
 }
 
 .card {
@@ -110,9 +149,6 @@ body{
   padding: 1rem;
 }
 
-.redC {
-  box-shadow: 0 10px 15px #39506f;
-}
 
 .Cardbg {
   background-image: url("https://wallpapercave.com/wp/wp2175488.png");
@@ -120,6 +156,10 @@ body{
   position: absolute;
   opacity: 0.95;
   translate: -20px;
+}
+
+.redC {
+  box-shadow: 0 10px 15px #39506f;
 }
 
 .yelwC {
@@ -145,8 +185,8 @@ body{
     transparent
   );
   position: absolute;
-  height: 50%;
-  width: 2px;
+  height: 65%;
+  width: 3px;
   left: 0px;
   top: 50%;
   opacity: 0;
@@ -161,8 +201,8 @@ body{
     transparent
   );
   position: absolute;
-  height: 50%;
-  width: 2px;
+  height: 65%;
+  width: 3px;
   right: 0px;
   top: 50%;
   opacity: 0;
@@ -171,7 +211,7 @@ body{
 }
 
 .card:hover::before, .card:hover::after, .canvas:hover::before, .canvas:hover::after{
-  top:25%;
+  top:18%;
   opacity: 1;
   z-index: 1000;
 }
@@ -188,25 +228,6 @@ body{
   align-self: flex-start;
 }
 
-.redT {
-  background-image: linear-gradient(#fc7b7b4c, #d737374c);
-}
-
-.yelwT {
-  background-image: linear-gradient(#fad778, #c99b53);
-}
-
-.blackT {
-  background-image: linear-gradient(#333333, #121212);
-}
-
-.blueT {
-  background-image: linear-gradient(#3d8882, #294c5d);
-}
-
-.pinkT {
-  background-image: linear-gradient(to bottom, #a95ef7, #6938da);
-}
 
 .img {
   display: flex;
@@ -270,29 +291,11 @@ body{
 }
 
 
-
-.yelwB {
-  background-image: linear-gradient(to top left, #c99b53, #fad778);
-}
-
-.blackB {
-  background-image: linear-gradient(to top left, #121212, #333333);
-}
-
-.blueB {
-  background-image: linear-gradient(to top left, #1b313b, #3d8882);
-}
-
-.pinkB {
-  background-image: linear-gradient(to top left, #5e31d7, #d97efd);
-}
-
 .controls #canvasControl {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
 }
 
 .controls #buttons {
