@@ -29,7 +29,7 @@ body{
 }
 
 .card2 {
-  background-image: url("assets/img/liekbg.png");
+  background-image: url("assets/img/mysystembg.png");
   background-size: cover;
   -webkit-transition: background-image .1s;
 }
