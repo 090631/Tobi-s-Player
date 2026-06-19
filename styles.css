@@ -383,6 +383,9 @@ input[type="range"]::-webkit-slider-thumb {
     justify-content: center;
     align-items: center;
 }
+.canvas #canvasControl {
+  z-index: 1000:
+}
 
 footer {
   display: flex;
