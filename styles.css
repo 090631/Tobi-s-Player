@@ -18,38 +18,38 @@ body{
   color: #000;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   animation: fadeIn 1s;
-  /*-webkit-transition: background-image .1s;*/
+  -webkit-transition: background-image .1s;
 
 }
 
 .card1 {
   background-image: url("assets/img/ridnymbg.png");
   background-size: cover;
-  /*-webkit-transition: background-image .1s;*/
+  -webkit-transition: background-image .1s;
 }
 
 .card2 {
-  background-image: url("assets/img/liek.jpg");
+  background-image: url("assets/img/liekbg.png");
   background-size: cover;
-  /*-webkit-transition: background-image .1s;*/
+  -webkit-transition: background-image .1s;
 }
 
 .card3 {
   background: url("https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
   background-size: cover;
-  /*-webkit-transition: background-image .1s;*/
+  -webkit-transition: background-image .1s;
 }
 
 .card4 {
   background: url("https://images.unsplash.com/photo-1570284613060-766c33850e00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
   background-size: cover;
-  /*-webkit-transition: background-image .1s;*/
+  -webkit-transition: background-image .1s;
 }
 
 .card5 {
   background: url("https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1828&q=80");
   background-size: cover;
-  /*-webkit-transition: background-image .1s;*/
+  -webkit-transition: background-image .1s
 }
 
 @keyframes fadeIn {
@@ -296,6 +296,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .controls #buttons {
@@ -390,7 +391,6 @@ footer {
   align-self: end;
   width: 100%;
   aspect-ratio: 20/1;
-
   position: relative;
 }
 

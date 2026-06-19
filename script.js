@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       setInterval(()=>{progress_bar[i].value = song[i].currentTime;},
       500);
     };
-    if(progress_bar[i].value == song[i].duration) {
+    if(progress_bar[i].value == progress_bar[i].max) {
       pause(i);
       play(i+1);
       change_bg(i+1);

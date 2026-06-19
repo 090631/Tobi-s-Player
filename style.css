@@ -76,12 +76,12 @@ body{
   }
 
   .section > .img1 {
-    background: url(https://images.unsplash.com/photo-1507471509451-1d04d60f896d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80);
+    background: url(assets/img/bellabg.png);
     background-size: cover;
   }
 
   .section > .img2 {
-    background: url(https://images.unsplash.com/photo-1609894851180-7be27983da7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80);
+    background: url(assets/img/liekbg.png);
     background-size: cover;
   }
 
