@@ -77,8 +77,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
       renderFrame();
       // audio.play();
   };
-
-  for (let i = 0; i < 6; i++){
+  const audio = document.querySelectorAll('audio');
+  for (let i = 0; i < 5; i++){
+      
       audio[i].onplay = function(){
           start(i);
       }
@@ -149,12 +150,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
       setInterval(()=>{progress_bar[i].value = song[i].currentTime;},
       500);
     };
-    if(progress_bar[i].value > progress_bar[i].max*0.95) {
-      pause(i);
-      play(i+1);
-      change_bg(i+1);
-    }
-  };
+    song[i].addEventListener('ended', () => {
+        if(i < song.length - 1){
+            play(i + 1);
+            change_bg(i + 1);
+        }
+    });
 
   function play_pause(num){
     if (button_icon[num].classList.contains("fa-play")){
