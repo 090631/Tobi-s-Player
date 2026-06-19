@@ -89,13 +89,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
 document.addEventListener('DOMContentLoaded', function(event) {
 
   const bgArray = [
-    "url(assets/img/ridnym.png)",
+    "url(assets/img/ridnymbg.png)",
     "url(assets/img/bellabg.png)",
     "url(assets/img/crossroadsbg.png)",
     "url(assets/img/mysystembg.png)",
     "url(assets/img/forvibg.png)",
     "url(assets/img/bangarangabg.png)",
-    "url(assets/img/)",
+    "url(assets/img/liekbg.png)",
     "url(https://images.unsplash.com/photo-1629197680187-d75229c25190?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80)",
     "url(https://images.unsplash.com/photo-1531816458010-fb7685eecbcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80)",
     "url(https://images.unsplash.com/photo-1570284613060-766c33850e00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80)",
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       setInterval(()=>{progress_bar[i].value = song[i].currentTime;},
       500);
     };
-    if(progress_bar[i].value == progress_bar[i].max) {
+    if(progress_bar[i].value > progress_bar[i].max*0.95) {
       pause(i);
       play(i+1);
       change_bg(i+1);
